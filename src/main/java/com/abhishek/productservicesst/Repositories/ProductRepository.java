@@ -1,0 +1,15 @@
+package com.abhishek.productservicesst.Repositories;
+
+import com.abhishek.productservicesst.Models.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+import java.util.Optional;
+
+public interface ProductRepository extends JpaRepository<Product, Long> {
+    @Override
+    Optional<Product> findById(Long id);
+
+    @Override
+    Product save(Product product);
+}

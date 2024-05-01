@@ -1,0 +1,9 @@
+package com.abhishek.productservicesst.Repositories;
+
+import com.abhishek.productservicesst.Models.Category;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CategoryRepository extends JpaRepository<Category, Long> {
+    @Override
+    Category save(Category category);
+}
